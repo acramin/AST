@@ -1,12 +1,25 @@
 x = 2.0;
 print(x);
+
 y = x + 1;
 print(y);
+
 print(x + y);
+
+print(x - y);
+
+print(x * y);
+
+print(x / y);
+
 print(-x + y);
+
 print( x % y);
+
 print(x ** y);
+
 z = 0;
 print(sin(z));
 print(cos(z));
+
 print(PI); 
