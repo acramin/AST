@@ -68,9 +68,9 @@ expr ::= expr:e1 PLUS expr:e2
     | expr:e1 DIVIDE expr:e2
             {: RESULT = new DivExpr(e1, e2); :}
     | expr:e1 MOD expr:e2
-            {: //TODO :}
+            {: RESULT = new ModExpr(e1, e2); :} //TODO
     | expr:e1 EXP expr:e2
-            {: // TODO :}
+            {:  RESULT = new ExpExpr(e1, e2); :} // TODO
     | MINUS expr:e 
             {: RESULT = new NegatedExpr(e); :} %prec UMINUS
     | LPAREN expr:e RPAREN 
@@ -88,14 +88,14 @@ expr ::= expr:e1 PLUS expr:e2
             :}
     | SIN LPAREN expr:e RPAREN 
             {:
-                // TODO
+                RESULT = new SinExpr(e); // TODO
             :}
     | COS LPAREN expr:e RPAREN
             {:
-                // TODO
+                RESULT = new CosExpr(e); // TODO
             :}
     | PI:pi 
-            {: 
-                // TODO
+            {:  
+                RESULT = new PiExpr(pi); // TODO
             :}
     ;

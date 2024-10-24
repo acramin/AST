@@ -7,6 +7,11 @@ import ast.expr.DivExpr;
 import ast.expr.IdExpr;
 import ast.expr.DoubleConstExpr;
 import ast.expr.NegatedExpr;
+import ast.expr.ModExpr;
+import ast.expr.ExpExpr;
+import ast.expr.SinExpr;
+import ast.expr.CosExpr;
+import ast.expr.PiExpr;
 
 public interface CodeVisitor {
     public Double visit(SumExpr e);
@@ -22,4 +27,14 @@ public interface CodeVisitor {
     public Double visit(DoubleConstExpr e);
 
     public Double visit(NegatedExpr e);
+
+    public Double visit(ModExpr e);
+
+    public Double visit(ExpExpr e);
+
+    public Double visit(SinExpr e);
+
+    public Double visit(CosExpr e);
+
+    public Double visit(PiExpr e);
 }
